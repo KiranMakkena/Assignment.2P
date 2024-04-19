@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+  <style>
+            body, html {
+              height: 100%;
+              margin: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              }
+
+            .container {
+                text-align: center;
+              }
+
+            .header {
+                margin-bottom: 25px;
+                font-size: 28px; 
+              }
+
+            .buttons {
+                display: flex;
+              }
+
+            .buttons a {
+                margin: 0 10px;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+              }
+    </style>
+</head>
+      <<body>
+        <h1>Dashboard</h1>
+        <% if (typeof user != 'undefined') { %>
+          <p>Welcome <%= user.name %></p>
+          <a href="/users/logout">Logout</a>
+        <% } else { %>
+          <p>Please log in to view this page</p>
+          <a href="/users/login">Login</a>
+        <% } %>
+      </body>
+      </html>
